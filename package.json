@@ -1,0 +1,28 @@
+{
+  "name": "microflo-example-arduino",
+  "version": "0.0.1",
+  "description": "Quick start example for MicroFlo on Arduino",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microflo/microflo-example-arduino.git"
+  },
+  "keywords": [
+    "microflo",
+    "arduino",
+    "fbp",
+    "dataflow"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/microflo/microflo-example-arduino/issues"
+  },
+  "homepage": "https://github.com/microflo/microflo-example-arduino#readme",
+  "devDependencies": {
+    "microflo": "^0.3.44"
+  }
+}
