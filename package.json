@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "main": "microflo generate --target=arduino graphs/blink.fbp build/blink/",
+    "main": "microflo generate --target=arduino graphs/blink.fbp build/blink/blink.ino",
     "build": "`node build.js`"
   },
   "repository": {

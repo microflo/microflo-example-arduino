@@ -1,17 +1,19 @@
+// Super-simple wrapper around the `arduino-builder` CLI tool
+// setting up the neccesary paths
 var path = require('path');
 
-var arduinoDir = "/home/jon/projects/microflo/arduino-1.8.1";
-var board = 'arduino:avr:uno';
-var sketch = 'build/blink/main.cpp';
-var buildDir = 'build/builder/blink';
+var sketch = process.argv[1] || 'build/blink/blink.ino';
+var board = process.arvg[2] || 'arduino:avr:uno';
+var arduinoDir = process.env.ARDUINO || "$HOME/arduino-1.8.1";
 
-var cmd = "arduino-builder -compile -verbose" +
+var buildDir = path.join(path.dirname(sketch), 'builder');
+var builder = path.join(arduinoDir, 'arduino-builder');
+
+var cmd = builder + ' -compile ' + ' -verbose' +
     " -hardware " + path.join(arduinoDir, 'hardware') +
     ' -tools ' + path.join(arduinoDir, 'tools-builder') +
     ' -tools ' + path.join(arduinoDir, 'hardware', 'tools') +
     ' -fqbn ' + board +
-    ' -libraries ' + './node_modules/microflo' +
-    ' -libraries ' + './node_modules/microflo-core' +
     ' ' + sketch;
     
 console.log(cmd);
