@@ -2,7 +2,7 @@ var path = require('path');
 
 var arduinoDir = "/home/jon/projects/microflo/arduino-1.8.1";
 var board = 'arduino:avr:uno';
-var sketch = 'build/blink/blink.ino';
+var sketch = 'build/blink/main.cpp';
 var buildDir = 'build/builder/blink';
 
 var cmd = "arduino-builder -compile -verbose" +
