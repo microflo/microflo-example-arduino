@@ -7,6 +7,5 @@ before_install:
 - wget -O arduino.tgz https://downloads.arduino.cc/arduino-1.8.1-linux64.tar.xz
 - tar -xf arduino.tgz
 script:
-- mkdir -p build/blink
 - npm run main
 - npm run build
