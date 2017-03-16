@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- 'stable'
+sudo: false
+dist: trusty
+- wget -O arduino.tgz https://downloads.arduino.cc/arduino-1.8.1-linux64.tar.xz
+- tar -xf arduino.tgz
+script:
+- npm run main
+- npm run build
