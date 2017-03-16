@@ -4,7 +4,9 @@
   "description": "Quick start example for MicroFlo on Arduino",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main": "microflo main --target=arduino --output build/blink/blink.ino graphs/blink.fbp",
+    "build": "`node build.js`"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   },
   "homepage": "https://github.com/microflo/microflo-example-arduino#readme",
   "devDependencies": {
-    "microflo": "^0.3.44"
+    "microflo": "^0.3.44",
+    "microflo-core": "^0.3.37"
   }
 }
