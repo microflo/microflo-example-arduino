@@ -12,8 +12,14 @@ You need to have the following software already installed.
 
 MicroFlo should work on any modern desktop OS, including Windows, Mac OSX and Linux.
 
-You will also need an Arduino device like an Arduino Uno, Nano or Lenoardo.
-Other Arduino-compatible devices should also work, but has not been tested.
+### Supported boards
+Any board with Arduino IDE support should work.
+For some boards you may need to install additional Arduino "cores" using the Arduino "board manager".
+
+Tested boards:
+
+* Arduino Leonardo
+* NodeMCUv3 ESP8266 (change LED pin to 2)
 
 ## Setting up
 
@@ -63,26 +69,28 @@ If the port is not autodetected correctly, you can specify it manually using `np
 
 ### Open in Flowhub
 
-Open [app.flowhub.io](http://app.flowhub.io) and log in with Github.
+When the runtime has started, it will show a URL in the console like
 
-And then add a new runtime at `Runtimes -> New -> Add manually`.
-Enter host=`localhost`, port=`3569`, type=`microflo`.
+`http://app.flowhub.io#runtime/endpoint?protocol%3Dwebsocket%26address%3Dws%3A%2F%2Flocalhost%3A3569%26id%3D7ed165ff-3f5c-498b-b5ef-14fbbd739165`
 
-Create a new project, for type `Microcontroller`.
-Select your newly added runtime in top-right corner.
+Copy/paste the URL shown into your browser, and load the page. You should now see the default "Blink" graph.
+
+To make changes, hit the "Edit as Project" button. Try to click on the first node, and change how often the timer changes.
 
 ## Using custom components
 
     TODO: document
 
-## Using a modified graph as the default program on startup
+## Using a modified graph as the default program
 
-    TODO: document
+Want your edited program to start automatically when the microcontroller is reset or power-cycled.
+
+* In Flowhub, click the graph settings and then the download button
+* Save this file as `graphs/myprogram.json`
+* In `package.json` update all occurrences of `graphs/blink.fbp` with `graphs/myprogram.json`
+* Rebuild by doing `npm run generate` and upload it using Arduino IDE
 
 ## Running automated test with fbp-spec
 
     TODO: document
 
-## Live mode
-
-    TODO: document
