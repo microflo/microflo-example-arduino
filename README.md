@@ -79,7 +79,10 @@ To make changes, hit the "Edit as Project" button. Try to click on the first nod
 
 ## Using custom components
 
-    TODO: document
+You can add/remove components to be included in the build in `components.json`.
+Components that are specific to your project should be put in `components/` folder.
+
+See [components/Custom.hpp](components/Custom.hpp) for an example.
 
 ## Using a modified graph as the default program
 
