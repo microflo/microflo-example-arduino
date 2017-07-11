@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "microflo generate --target=arduino graphs/blink.fbp build/blink/blink.ino",
-    "start": "microflo runtime --componentmap build/blink/componentlib-map.json",
+    "generate": "microflo generate --library ./node_modules/microflo-core/components/arduino-standard.json --target=arduino graphs/blink.fbp build/blink/blink.ino",
+    "start": "microflo runtime --graph graphs/blink.fbp --componentmap build/blink/componentlib-map.json",
     "build": "`node build.js`"
   },
   "repository": {
