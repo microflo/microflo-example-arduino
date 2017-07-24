@@ -7,5 +7,5 @@ before_install:
 - wget -O arduino.tgz https://downloads.arduino.cc/arduino-1.8.1-linux64.tar.xz
 - tar -xf arduino.tgz
 script:
-- npm run main
+- npm run generate
 - ARDUINO=`pwd`/arduino-1.8.1 npm run build
