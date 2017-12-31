@@ -26,6 +26,6 @@
   "homepage": "https://github.com/microflo/microflo-example-arduino#readme",
   "devDependencies": {
     "microflo": "^0.6.0",
-    "microflo-core": "^0.5.0"
+    "microflo-core": "^0.6.0"
   }
 }
