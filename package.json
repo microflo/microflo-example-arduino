@@ -4,8 +4,8 @@
   "description": "Quick start example for MicroFlo on Arduino",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "microflo generate --library ./components.json --target=arduino graphs/blink.fbp build/blink/blink.ino",
-    "start": "microflo runtime --wait-connect 3 --graph graphs/blink.fbp --componentmap build/blink/componentlib-map.json",
+    "generate": "microflo generate --components ./node_modules/microflo-core/components --target=arduino graphs/blink.fbp build/blink.ino",
+    "start": "microflo runtime --wait-connect 3 --graph graphs/blink.fbp --componentmap build/blink.component.map.json",
     "build": "`node build.js`"
   },
   "repository": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/microflo/microflo-example-arduino#readme",
   "devDependencies": {
-    "microflo": "^0.4.1",
-    "microflo-core": "^0.3.37"
+    "microflo": "^0.6.0",
+    "microflo-core": "^0.5.0"
   }
 }

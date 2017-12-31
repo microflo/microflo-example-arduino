@@ -2,7 +2,7 @@
 // setting up the neccesary paths
 var path = require('path');
 
-var sketch = process.argv[2] || 'build/blink/blink.ino';
+var sketch = process.argv[2] || 'build/blink.ino';
 var board = process.argv[3] || 'arduino:avr:uno';
 var arduinoDir = process.env.ARDUINO || process.env.HOME + "/arduino-1.8.1";
 
